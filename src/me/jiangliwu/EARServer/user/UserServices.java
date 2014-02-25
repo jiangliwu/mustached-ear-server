@@ -6,6 +6,7 @@ import java.util.List;
 
 import me.jiangliwu.EARServer.npc.Npc;
 import me.jiangliwu.EARServer.util.DB;
+import me.jiangliwu.EARServer.util.G;
 
 import org.java_websocket.WebSocket;
 import org.json.JSONArray;
@@ -33,6 +34,8 @@ public class UserServices {
 					.put("posy", Integer.parseInt(pos[1])).put("map", u.getMap().getId());
 			ret.put("args", retArgs);
 			con.send(ret.toString());
+			
+			
 		}
 	}
 }

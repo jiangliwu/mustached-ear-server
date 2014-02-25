@@ -65,6 +65,20 @@ public class DB {
 			throw re;
 		}
 	}
+	
+	public static List<?> findAll(String className){
+		log.debug("finding " + className + " all model!");
+		try {
+			String queryString = "from "+ className +" as model";
+			Query queryObject = SessionFactoryHolder.getSession().createQuery(
+					queryString);;
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find by property name failed", re);
+			throw re;
+		}
+	}
+	
 	public static List<?> findByProperty(String className , String propertyName, Object value){
 		
 		log.debug("finding "+ className + " instance with property: " + propertyName

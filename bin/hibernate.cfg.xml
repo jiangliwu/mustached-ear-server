@@ -29,7 +29,7 @@
 		<mapping class="me.jiangliwu.EARServer.user.User" />
 		<mapping class="me.jiangliwu.EARServer.task.Task" />
 		<mapping class="me.jiangliwu.EARServer.npc.Npc" />
-		
+		<mapping class="me.jiangliwu.EARServer.monster.Monster" />
 		
 		
 	</session-factory>
